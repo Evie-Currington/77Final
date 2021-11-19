@@ -1,72 +1,45 @@
-# Physics 77 Final
+Project outline:
+Add several planets into a 2D plane with the initial positions, masses, and starting velocities.
+Next, iterate through each planet and calculate its future position by using its velocity and the effect of gravity pulling it towards the other planets.
+We will calculate the effect of gravity using the Newtonian formula, not gravitational relativity.
+Plot a graph of the planets with their positions over time
+
+Division of labor:
+Evie: Calculating gravitational force and future locations
+Federico: Interactivity with the audience so that the user can change the position, mass, and velocity of the planets
+Alec: Visualization of the planets as a graph or a video
+
+Tools/packages needed:
+Numpy
+Matplotlib
+Github
+Vpython
+
+Potential functions needed:
+def find_distance(a, b):
+    	# return distance between two points
+    	return np.sqrt((a[0]-b[0]) ** 2 + (a[1] - b[1]) ** 2)
+
+Def find_gravity(a, b):
+	#return gravitational pull between two points
+
+def find_bearing(a, b):	
+	#return angle between two points
+
+Skeleton code:
+
+Github repository:
+https://github.com/thompalec/physics88final
+
+Will post project description as well as versions as we finish coding.  
 
 
-#position of the Earth
-position1 = [1,2]
-#position of the sun
-position2 = [2,1.5*10**8]
-#mass of the Earth
-Earth_mass = 5.9 * 10**24 
-#mass of the sun
-sun_mass = 1.989 * 10**30
-#Earth's average orbital velocity, unit:Km/s
-Earth_orbit_velocity = 30
 
+Applications:
+Two-body problem
+Three-body problem
+Solar system simulation
 
-def force_gravity(planet1,planet2):
-    
-    #gravitational constant, units: m^3 kg^-1 s^-2
-    G = 6.67408 * 10**(-11)   
-    #vector difference
-    distance = [(position1[0]-position2[0]), (position1[1]-position2[1])]
-    #distance between mass 1 and mass 2
-    distance_magnitude = np.sqrt(((position1[0]-position1[1])**2)+(position2[0]-position2[1])**2) 
-    #unit vector
-    r_hat = distance/distance_magnitude
-    #force magnitude
-    force_magnitude = (G*planet1*planet2)/distance_magnitude**2
-    #force vector
-    force_vector = -force_magnitude*r_hat
-    print('The distance between the planet and the sun is {:.1e} km'.format(distance_magnitude))
-    #print('The direction of the force between the planet and the sun is {:.1e}'.format(r_hat))
-    print('The magnitude of the gravitational force between the planet and the sun is {:.1e}'.format(force_magnitude))
-    #print('The gravitational force vector between the planet and the sun is {:.1e} km'.format(force_vector))
-    
-    return force_vector
-    
-force_gravity(Earth_mass,sun_mass)
-
-
-distance_magnitude = np.sqrt(((position1[0]-position1[1])**2)+(position2[0]-position2[1])**2) 
-
-def angular_momentum(planet_mass, planet_velocity, distance):
-        
-    #planet angular momentum with respect to the Sun
-    L = planet_mass * planet_velocity * distance
-    print('The angular momentum of the planet is {:.1e} kg*m^2/s'.format(L))
-    
-angular_momentum(Earth_mass, Earth_orbit_velocity, distance_magnitude)
-
-#planet masses, unit:kg
-Mercury_m = 3.3*10**23
-earth_m = 5.9*10**24
-saturn_m = 5.7*10**26
-mars_m = 6.4*10**23
-venus_m = 4.8*10**24
-neptune_m = 10**23
-uranus_m = 8.6*10**25
-jupiter_m = 1.8*10**25
-pluto_m = 1.2*10**22
-
-#distances from sun, unit:km
-mercury_d = 5.7*10**7
-earth_d = 1.5*10**8
-venus_d = 10**8
-mars_d = 2.2*10**8
-jupiter_d = 7.7*10**8
-saturn_d = 1.4*10**9
-uranus_d = 2.8*10**9
-neptune_d = 4.4*10**9
 pluto_d = 5.9*10**9
     
     

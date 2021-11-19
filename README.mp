@@ -25,4 +25,4 @@ Solar system simulation
 
 
 Github repository:
-https://github.com/evie-currington/77Final   
+https://github.com/Evie-Currington/77Final

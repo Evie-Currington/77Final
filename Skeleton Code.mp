@@ -1,4 +1,4 @@
-Potential Functions:
+Skeleton Code:
 
 def find_distance(a, b):
     	# return distance between two points
@@ -11,3 +11,11 @@ def find_gravity(a, b):
 
 def find_bearing(a, b):	
 	#return angle between two points
+
+
+draw planets and sun as spheres
+
+
+map location of planets and sun based upon find_distance() and find_bearing()
+
+

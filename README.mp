@@ -1,4 +1,4 @@
-Project outline:
+#Project outline:
 Add several planets into a 2D plane with the initial positions, masses, and starting velocities.
 Next, iterate through each planet and calculate its future position by using its velocity and the effect of gravity pulling it towards the other planets.
 We will calculate the effect of gravity using the Newtonian formula, not gravitational relativity.
